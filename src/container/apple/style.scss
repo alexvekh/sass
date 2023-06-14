@@ -31,17 +31,30 @@
   @include s.click;
 }
 
-.header__link {
+.header__link { 
   font-size: s.size('small');
 }
 
+.ad {
+  @extend .section;
+  background: s.color(whiteLight);
+  color: s.color(fontDark);
+  align-items: center;
+}
+
 .ad__content {
-  //@extend .section;
-  //@extend .section__content;
-  background: green;
-  color: black;
-  padding: 12px;
-  // background-color: s.color('backgroundDark');
+
+  @extend .section__content;
+
+  display: flex;
+  padding: s.space(3); 
+  justify-content: space-between;
+  
+}
+
+.ad__title {
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .product {
@@ -58,6 +71,7 @@
   gap: s.space(5);
   text-align: center;
   align-content: center;
+  width: 50%;
 }
 
 .product__title {
@@ -69,6 +83,7 @@
 
 .product__description {
   font-size: 28px;
+  
 }
 
 .product__action {
@@ -136,8 +151,14 @@
 $productImage: (
   'iphone-pro' '/img/iphone_pro.png' #000,
   'iphone' '/img/iphone.png' #fafafa,
+  'iwatch' '/img/iwatch.png' #000,
   'trade-in' '/img/trade_in.png' #fbfbfd,
   'conference' '/img/conference.png' #000,
+  'ipad' '/img/ipad.png' #fbfbfd,
+  'small_business' '/img/small_business.png' #000,
+  'gift' '/img/gift.png' #fbfbfd,
+  'card' '/img/card.png' #fbfbfd,
+  
 );
 
 @each $class, $url, $color in $productImage {
@@ -167,3 +188,40 @@ $productImage: (
   }
 }
 
+.footer {
+  @extend .section;
+  //background-color: s.color('background');  // не видно.
+  background-color: #f1f1f5;      // замінив на свій, бо не видно
+}
+
+.footer__content {
+  @extend .section__content;
+  // display: flex;
+  // flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: s.space(10) 0; 
+  justify-content: space-between;
+  font-size: s.size('small');
+  line-height: 100%;
+}
+
+.footer__title { 
+  font-weight: 600;
+  color: s.color('fontDark');
+  margin-bottom: s.space(4);
+}
+
+.footer__item {
+  margin-bottom: s.space(3);
+  line-height: 100%;
+}
+
+.footer__column ul {
+  line-height: 200%;
+}
+
+.footer__link {
+  color: s.color('backgroundDark');
+}
