@@ -87,8 +87,7 @@ router.get('/apple', function (req, res) {
 
     conference: {
       title: 'WWWDC23',
-      descriptions:
-        'Apple Worldwide Developers Conference Join us online June 5‑9.',
+      descriptions: 'Apple Worldwide Developers Conference Join us online June 5‑9.',
       link: {
         text: 'Learn more',
         link: 'www.example.com/wwwdc23',
@@ -112,17 +111,15 @@ router.get('/apple', function (req, res) {
     },
     gift: {
       title: 'Take your pick of Mother’s Day gifts.',
-      descriptions:
-        'So many ways to thank whoever you call Mom.',
+      descriptions: 'So many ways to thank whoever you call Mom.',
       link: {
         text: 'Shop the gift guide',
         link: 'www.example.com/gift',
       },
     },
     card: {
-      title: 'card',
-      descriptions:
-        'Get up to 3% Daily Cash back with every purchase.',
+      title: 'Card',
+      descriptions: 'Get up to 3% Daily Cash back with every purchase.',
       link: {
         text: 'Learn more',
         link: 'www.example.com/card',
